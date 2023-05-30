@@ -535,7 +535,7 @@
                                             </h3>
                                         </div>
                                         <h3>
-                                            <?php echo $_POST['price'] ?>
+                                            <?php echo $_POST['unit'] ?>
                                         </h3>
                                         <h3>
                                             <?php echo "$" . $_POST['price']  ?>
@@ -550,7 +550,7 @@
                                     // Crea un ítem en la preferencia
                                     $item = new MercadoPago\Item();
                                     $item->title = $_POST['title'];
-                                    $item->quantity = $_POST['price'] ;
+                                    $item->quantity = $_POST['unit'] ;
                                     $item->unit_price = $_POST['price'];
                                     $preference->items = array($item);
                                     $preference->save();
