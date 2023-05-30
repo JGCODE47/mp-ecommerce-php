@@ -5,6 +5,6 @@ const bricksBuilder = mp.bricks();
 
 mp.bricks().create("wallet", "pagarProducto", {
     initialization: {
-        preferenceId: "<>",
+        preferenceId: "<dev_24c65fb163bf11ea96500242ac130004>",
     },
  });
