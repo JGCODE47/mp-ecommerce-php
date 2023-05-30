@@ -543,15 +543,15 @@
                                     </div>
                                     <button type="submit" class="mercadopago-button" id="pagarProducto" formmethod="post">Pagar</button>
                                     <?php
-                                    // SDK de Mercado Pago
+                                    
                                     require __DIR__ .  '/vendor/autoload.php';
 
-                                    // Agrega credenciales
+                                    
                                     MercadoPago\SDK::setAccessToken('TEST-6077109975925282-092815-14c26c2c515e7e7a560e2d51822abe43-195885622');
-                                    // Crea un objeto de preferencia
+                                    
                                     $preference = new MercadoPago\Preference();
 
-                                    // Crea un ítem en la preferencia
+                                    
                                     $item = new MercadoPago\Item();
                                     $item->title = $_POST['title'];
                                     $item->quantity = $_POST['unit'];
@@ -600,7 +600,7 @@
 
 
     
-// SDK MercadoPago.js
+
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script src="script.js"></script>
 </body>
