@@ -553,9 +553,7 @@
                                     $item->quantity = $_POST['unit'] ;
                                     $item->unit_price = $_POST['price'];
                                     $preference->items = array($item);
-                                    $preference->save();
-                                    echo $preference;
-                                    ?>
+                                    $preference->save();                                    ?>
 
                                     <button type="submit" class="mercadopago-button" id="pagarProducto" preference="alalala" formmethod="post">Pagar</button>
 
