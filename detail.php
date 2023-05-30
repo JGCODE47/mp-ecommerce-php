@@ -557,7 +557,7 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" id="pagarProducto" preference="<?php echo $preference;?>" formmethod="post">Pagar</button>
+                                    <button type="submit" class="mercadopago-button" id="pagarProducto" preference="alalala" formmethod="post">Pagar</button>
                                     
                                 </div>
                             </div>
