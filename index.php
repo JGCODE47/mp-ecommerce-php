@@ -1,3 +1,10 @@
+<?php
+
+    require_once 'vendor/autoload.php';
+
+    MercadoPago\SDK::setAccessToken("TEST-6077109975925282-092815-14c26c2c515e7e7a560e2d51822abe43-195885622");
+
+?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     

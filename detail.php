@@ -453,23 +453,7 @@
 
 
 <body class="as-theme-light-heroimage">
-<?php
-                                    
-                                    require __DIR__ .  '/vendor/autoload.php';
 
-                                    
-                                    MercadoPago\SDK::setAccessToken('TEST-6077109975925282-092815-14c26c2c515e7e7a560e2d51822abe43-195885622');
-                                    
-                                    $preference = new MercadoPago\Preference();
-
-                                    
-                                    $item = new MercadoPago\Item();
-                                    $item->title = $_POST['title'];
-                                    $item->quantity = $_POST['unit'];
-                                    $item->unit_price = $_POST['price'];
-                                    $preference->items = array($item);
-                                    $preference->save();
-                                    ?>
     <div class="stack">
 
         <div class="as-search-wrapper" role="main">
@@ -554,11 +538,27 @@
                                             <?php echo $_POST['price'] ?>
                                         </h3>
                                         <h3>
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo "$" . $_POST['price']  ?>
                                         </h3>
                                     </div>
+
+                                    <?php
+                                    require_once __DIR__.'/vendor/autoload.php';
+                                    // Crea un objeto de preferencia
+                                    $preference = new MercadoPago\Preference();
+
+                                    // Crea un ítem en la preferencia
+                                    $item = new MercadoPago\Item();
+                                    $item->title = $_POST['title'];
+                                    $item->quantity = $_POST['price'] ;
+                                    $item->unit_price = $_POST['price'];
+                                    $preference->items = array($item);
+                                    $preference->save();
+                                    echo $preference;
+                                    ?>
+
                                     <button type="submit" class="mercadopago-button" id="pagarProducto" preference="alalala" formmethod="post">Pagar</button>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -599,10 +599,10 @@
 
 
 
-    
 
-<script src="https://sdk.mercadopago.com/js/v2"></script>
-<script src="script.js"></script>
+
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
