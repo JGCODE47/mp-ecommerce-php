@@ -5,6 +5,6 @@ const pagarProducto = document.querySelector("#pagarProducto")
 
 mp.bricks().create("wallet", "pagarProducto", {
     initialization: {
-        preferenceId: `${pagarProducto.getAttribute("preference")}`,
+        preferenceId: '<PREFERENCE_ID>',
     },
  });
