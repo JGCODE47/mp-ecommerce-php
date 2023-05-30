@@ -541,7 +541,7 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <button type="submit" class="mercadopago-button" id="pagarProducto" formmethod="post">Pagar</button>
                                     <?php
                                     // SDK de Mercado Pago
                                     require __DIR__ .  '/vendor/autoload.php';
@@ -595,6 +595,14 @@
             <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle>
         </svg> </div>
     <div id="ac-gn-viewport-emitter"> </div>
+
+
+
+
+    
+// SDK MercadoPago.js
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
