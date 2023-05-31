@@ -1,14 +1,9 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "d49eb7ac7ff8fe15c5cd2fb64215b596",
     "packages": [
         {
             "name": "doctrine/annotations",
             "version": "1.14.3",
+            "version_normalized": "1.14.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
@@ -37,7 +32,9 @@
             "suggest": {
                 "php": "PHP 8.0 or higher comes with attributes, a native replacement for annotations"
             },
+            "time": "2023-02-01T09:20:38+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
@@ -80,11 +77,12 @@
                 "issues": "https://github.com/doctrine/annotations/issues",
                 "source": "https://github.com/doctrine/annotations/tree/1.14.3"
             },
-            "time": "2023-02-01T09:20:38+00:00"
+            "install-path": "../doctrine/annotations"
         },
         {
             "name": "doctrine/common",
             "version": "3.4.3",
+            "version_normalized": "3.4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
@@ -110,7 +108,9 @@
                 "symfony/phpunit-bridge": "^6.1",
                 "vimeo/psalm": "^4.4"
             },
+            "time": "2022-10-09T11:47:59+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\": "src"
@@ -171,11 +171,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-09T11:47:59+00:00"
+            "install-path": "../doctrine/common"
         },
         {
             "name": "doctrine/deprecations",
             "version": "v1.1.0",
+            "version_normalized": "1.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
@@ -198,7 +199,9 @@
             "suggest": {
                 "psr/log": "Allows logging deprecations via PSR-3 logger implementation"
             },
+            "time": "2023-05-29T18:55:17+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Deprecations\\": "lib/Doctrine/Deprecations"
@@ -214,11 +217,12 @@
                 "issues": "https://github.com/doctrine/deprecations/issues",
                 "source": "https://github.com/doctrine/deprecations/tree/v1.1.0"
             },
-            "time": "2023-05-29T18:55:17+00:00"
+            "install-path": "../doctrine/deprecations"
         },
         {
             "name": "doctrine/event-manager",
             "version": "1.2.0",
+            "version_normalized": "1.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/event-manager.git",
@@ -243,7 +247,9 @@
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
                 "vimeo/psalm": "^4.24"
             },
+            "time": "2022-10-12T20:51:15+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\": "src"
@@ -306,11 +312,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-12T20:51:15+00:00"
+            "install-path": "../doctrine/event-manager"
         },
         {
             "name": "doctrine/lexer",
             "version": "2.1.0",
+            "version_normalized": "2.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
@@ -333,7 +340,9 @@
                 "psalm/plugin-phpunit": "^0.18.3",
                 "vimeo/psalm": "^4.11 || ^5.0"
             },
+            "time": "2022-12-14T08:49:07+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\Lexer\\": "src"
@@ -384,11 +393,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-14T08:49:07+00:00"
+            "install-path": "../doctrine/lexer"
         },
         {
             "name": "doctrine/persistence",
             "version": "3.2.0",
+            "version_normalized": "3.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
@@ -419,7 +429,9 @@
                 "symfony/cache": "^4.4 || ^5.4 || ^6.0",
                 "vimeo/psalm": "4.30.0 || 5.3.0"
             },
+            "time": "2023-05-17T18:32:04+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Persistence\\": "src/Persistence"
@@ -482,11 +494,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-17T18:32:04+00:00"
+            "install-path": "../doctrine/persistence"
         },
         {
             "name": "mercadopago/dx-php",
             "version": "2.5.3",
+            "version_normalized": "2.5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mercadopago/sdk-php.git",
@@ -512,7 +525,9 @@
                 "symfony/yaml": "~2.5",
                 "vlucas/phpdotenv": "^2.5"
             },
+            "time": "2022-11-30T12:55:58+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "MercadoPago\\": [
@@ -533,11 +548,12 @@
             "support": {
                 "source": "https://github.com/mercadopago/sdk-php/tree/2.5.3"
             },
-            "time": "2022-11-30T12:55:58+00:00"
+            "install-path": "../mercadopago/dx-php"
         },
         {
             "name": "psr/cache",
             "version": "3.0.0",
+            "version_normalized": "3.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/cache.git",
@@ -552,12 +568,14 @@
             "require": {
                 "php": ">=8.0.0"
             },
+            "time": "2021-02-03T23:26:27+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0.x-dev"
                 }
             },
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Psr\\Cache\\": "src/"
@@ -582,16 +600,9 @@
             "support": {
                 "source": "https://github.com/php-fig/cache/tree/3.0.0"
             },
-            "time": "2021-02-03T23:26:27+00:00"
+            "install-path": "../psr/cache"
         }
     ],
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "dev": true,
+    "dev-package-names": []
 }
