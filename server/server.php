@@ -1,4 +1,4 @@
-<?php 
+<?php
 require __DIR__ . '/../vendor/autoload.php';
 
 MercadoPago\SDK::setAccessToken("APP_USR-8902774665784533-092911-fab78ca802b6475923ebb446b02fee62-1160743707");
@@ -24,8 +24,10 @@ $preference->payer = $payer;
 // Crea un ítem en la preferencia
 $item = new MercadoPago\Item();
 $item->title = $_POST["name_product"];
+$item->description = "Un nuevo Celular"; // Agrega la descripción del producto aquí
 $item->quantity = $_POST["unit"];
 $item->unit_price = $_POST["price"];
+$item->picture_url = "https://jgcode47-mp-ecommerce-php.herokuapp.com/assets/l6g6.jpg"; // Agrega la URL de la imagen del producto aquí
 $preference->items = array($item);
 
 // Configurar el número máximo de cuotas (mensualidades)
@@ -35,12 +37,9 @@ $preference->payment_methods = array(
 );
 
 $excludedPaymentMethod = "visa"; // Obtener el método de pago a excluir del formulario
-$preference->payment_methods = array(
-    'excluded_payment_methods' => array(
-        array('id' => $excludedPaymentMethod)
-    )
+$preference->payment_methods->excluded_payment_methods = array(
+    array('id' => $excludedPaymentMethod)
 );
-
 
 $preference->back_urls = array(
     "success" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php",
