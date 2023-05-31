@@ -14,7 +14,18 @@ if (isset($_POST)) {
     $item->quantity = $_POST["unit"];
     $item->unit_price = $_POST["price"];
     $preference->items = array($item);
+    
+    $preference->back_urls = array(
+        "success" => "http://localhost:8080/feedback",
+        "failure" => "http://localhost:8080/feedback", 
+        "pending" => "http://localhost:8080/feedback"
+    );
+    $preference->auto_return = "approved"; 
+
     $preference->save();
 
-    echo json_encode($preference->items);
+    $response = array(
+        'id' => $preference->id,
+    ); 
+    echo json_encode($response);
 }
