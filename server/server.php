@@ -16,5 +16,5 @@ if (isset($_POST)) {
     $preference->items = array($item);
     $preference->save();
 
-    echo json_encode($preference);
+    echo json_encode($preference->items);
 }

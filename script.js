@@ -14,3 +14,14 @@ btn.addEventListener("click", (e)=>{
     }
     Promise.resolve(Preferenc()).then(item=>console.log(item))
 })
+
+
+
+
+
+mp.bricks().create("wallet", "mercadopago", {
+    initialization: {
+        preferenceId: "<PREFERENCE_ID>",
+    },
+ });
+ 
