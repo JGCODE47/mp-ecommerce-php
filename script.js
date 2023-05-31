@@ -1,88 +1,16 @@
+const btn = document.querySelector(".mercadopago-button")
 
-// Add SDK credentials
-// REPLACE WITH YOUR PUBLIC KEY AVAILABLE IN: https://developers.mercadopago.com/panel
-const mercadopago = new MercadoPago('APP_USR-f67862ea-f70e-4ae4-8e99-80dcff04b630', {
-    locale: 'es-CO' // The most common are: 'pt-BR', 'es-AR' and 'en-US'
-  });
-  
-  // Handle call to backend and generate preference.
-  document.getElementById("mercadopago-button").addEventListener("click", function () {
-  
-    $('#mercadopago-button').attr("disabled", true);
-  
-    const orderData = {
-      quantity: document.getElementById("quantity").value,
-      description: document.getElementById("product-description").innerHTML,
-      price: document.getElementById("unit-price").innerHTML
-    };
-  
-    fetch("https://jgcode47-mp-ecommerce-php.herokuapp.com/server.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(orderData),
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (preference) {
-        createCheckoutButton(preference.id);
-  
-        $(".shopping-cart").fadeOut(500);
-        setTimeout(() => {
-          $(".container_payment").show(500).fadeIn();
-        }, 500);
-      })
-      .catch(function () {
-        alert("Unexpected error");
-        $('#checkout-btn').attr("disabled", false);
-      });
-  });
-  
-  function createCheckoutButton(preferenceId) {
-    // Initialize the checkout
-    const bricksBuilder = mercadopago.bricks();
-  
-    const renderComponent = async (bricksBuilder) => {
-      if (window.checkoutButton) window.checkoutButton.unmount();
-      await bricksBuilder.create(
-        'wallet',
-        'button-checkout', // class/id where the payment button will be displayed
-        {
-          initialization: {
-            preferenceId: preferenceId
-          },
-          callbacks: {
-            onError: (error) => console.error(error),
-            onReady: () => {}
-          }
-        }
-      );
-    };
-    window.checkoutButton =  renderComponent(bricksBuilder);
-  }
-  
-  // Handle price update
-  function updatePrice() {
-    let quantity = document.getElementById("quantity").value;
-    let unitPrice = document.getElementById("unit-price").innerHTML;
-    let amount = parseInt(unitPrice) * parseInt(quantity);
-  
-    document.getElementById("cart-total").innerHTML = "$ " + amount;
-    document.getElementById("summary-price").innerHTML = "$ " + unitPrice;
-    document.getElementById("summary-quantity").innerHTML = quantity;
-    document.getElementById("summary-total").innerHTML = "$ " + amount;
-  }
-  
-  document.getElementById("quantity").addEventListener("change", updatePrice);
-  updatePrice();
-  
-  // Go back
-  document.getElementById("go-back").addEventListener("click", function () {
-    $(".container_payment").fadeOut(500);
-    setTimeout(() => {
-      $(".shopping-cart").show(500).fadeIn();
-    }, 500);
-    $('#checkout-btn').attr("disabled", false);
-  });
+btn.addEventListener("click", (e)=>{
+    const date = new FormData();
+    date.append("name_product", e.target.getAttribute("name_product"))
+    date.append("price", parseInt(e.target.getAttribute("price")))
+    date.append("unit", parseInt(e.target.getAttribute("unit")))
+    let opt = {
+        method:"POST",
+        body:date
+    }
+    async function Preferenc(){
+        const response = await fetch("https://jgcode47-mp-ecommerce-php.herokuapp.com/server/server.php", opt)
+    }
+    Promise.resolve(Preferenc()).then(item=>console.log(item))
+})
