@@ -124,13 +124,13 @@
                                             </h3>
                                         </div>
                                         <h3 >
-                                            <?php echo $_POST['price'] ?>
+                                            <?php echo $_POST['unit'] ?>
                                         </h3>
                                         <h3 >
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo "$" . $_POST['price'] ?>
                                         </h3>
                                     </div>
-                                    <button class="mercadopago-button" name_product="<?php echo $_POST['title'] ?>" price="<?php echo $_POST['price'] ?>" unit="<?php echo "$" . $_POST['unit'] ?>">Pagar</button>
+                                    <button class="mercadopago-button" name_product="<?php echo $_POST['title'] ?>" price="<?php echo $_POST['price'] ?>" unit="<?php echo $_POST['unit'] ?>">Pagar</button>
                                 </div>
                             </div>
                         </div>
