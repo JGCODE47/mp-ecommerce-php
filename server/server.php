@@ -16,9 +16,9 @@ MercadoPago\SDK::setAccessToken("APP_USR-6077109975925282-092815-2835b9088a8e036
     $preference->items = array($item);
     
     $preference->back_urls = array(
-        "success" => "http://localhost:8080/feedback",
-        "failure" => "http://localhost:8080/feedback", 
-        "pending" => "http://localhost:8080/feedback"
+        "success" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php",
+        "failure" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php", 
+        "pending" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php"
     );
     $preference->auto_return = "approved"; 
 
