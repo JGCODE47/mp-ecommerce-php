@@ -12,16 +12,18 @@ btn.addEventListener("click", (e)=>{
     async function Preferenc(){
         const response = await fetch("https://jgcode47-mp-ecommerce-php.herokuapp.com/server/server.php", opt)
     }
-    Promise.resolve(Preferenc()).then(item=>console.log(item))
+    Promise.resolve(Preferenc()).then(item=>{
+        mp.bricks().create("wallet", "mercadopago", {
+            initialization: {
+                preferenceId: `${item.id}`,
+            },
+         });
+    })
 })
 
 
 
 
 
-mp.bricks().create("wallet", "mercadopago", {
-    initialization: {
-        preferenceId: "<PREFERENCE_ID>",
-    },
- });
+
  
