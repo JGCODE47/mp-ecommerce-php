@@ -34,11 +34,13 @@ $preference->payment_methods = array(
     'installments' => (int)$installments
 );
 
-// Excluir el método de pago indicado en las instrucciones
 $excludedPaymentMethod = "visa"; // Obtener el método de pago a excluir del formulario
-$preference->payment_methods->excluded_payment_methods = array(
-    array('id' => $excludedPaymentMethod)
+$preference->payment_methods = array(
+    'excluded_payment_methods' => array(
+        array('id' => $excludedPaymentMethod)
+    )
 );
+
 
 $preference->back_urls = array(
     "success" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php",
