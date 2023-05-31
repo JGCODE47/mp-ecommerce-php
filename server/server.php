@@ -23,10 +23,11 @@ $preference->payer = $payer;
 
 // Crea un ítem en la preferencia
 $item = new MercadoPago\Item();
+$preference->items = array($item);
 $item->title = $_POST["name_product"];
-$item->description = "Un nuevo Celular"; // Agrega la descripción del producto aquí
+$item->description = "Descripción del producto"; // Agrega la descripción del producto aquí
 $item->quantity = $_POST["unit"];
-$item->unit_price = $_POST["price"];
+$item->unit_price = (float)$_POST["price"];
 $item->picture_url = "https://jgcode47-mp-ecommerce-php.herokuapp.com/assets/l6g6.jpg"; // Agrega la URL de la imagen del producto aquí
 $preference->items = array($item);
 
