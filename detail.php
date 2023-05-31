@@ -131,6 +131,7 @@
                                         </h3>
                                     </div>
                                     <button class="mercadopago-button"  name_product="<?php echo $_POST['title'] ?>" price="<?php echo $_POST['price'] ?>" unit="<?php echo $_POST['unit'] ?>">Pagar</button>
+                                    <div id="wallet_container"></div>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <div role="alert" id="wallet_container" class="as-loader-text ally" aria-live="assertive">
+        <div role="alert"  class="as-loader-text ally" aria-live="assertive">
 
         </div>
         <div class="as-footnotes">
