@@ -104,7 +104,7 @@
                                                         </span>
                                                     </button>
                                                 </div>
-                                                <materializer data-uid="as-accordion-id0" id="as-accordion-id0" data-show-height="computed" data-hide-height="0" class="as-search-facet-materializer ase-materializer ase-materializer-show" data-shown-init="true">
+                                                <materializer data-uid="as-accordion-id0" id="as-accordion-id0" data-show-height="computed" data-hide-height="0" class="as-search-facet-materializer ase-materializer ase-materializer-show" data-shown-init="true" style="">
                                                     <div class="as-accordion-content">
                                                         <ul class="as-search-filter-items  as-filter-text-type    ">
                                                             <li class="as-filter-item       ">
