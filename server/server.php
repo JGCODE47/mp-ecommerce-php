@@ -3,7 +3,7 @@
 require __DIR__  . '/../vendor/autoload.php';
 
 //REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel/credentials
-MercadoPago\SDK::setAccessToken("TEST-6077109975925282-092815-14c26c2c515e7e7a560e2d51822abe43-195885622");
+MercadoPago\SDK::setAccessToken("APP_USR-8902774665784533-092911-fab78ca802b6475923ebb446b02fee62-1160743707");
 
 
     // Crea un objeto de preferencia
