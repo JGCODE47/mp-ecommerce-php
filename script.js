@@ -17,7 +17,8 @@ btn.addEventListener("click", (e) => {
         
 
         const mp = new MercadoPago('APP_USR-f67862ea-f70e-4ae4-8e99-80dcff04b630');
-        mp.bricks().create("wallet",{
+        const bricksBuilder = mp.bricks();
+        mp.bricks().create("wallet", "wallet_container", {
             initialization: {
                 preferenceId: `${item.id}`,
             },
