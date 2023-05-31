@@ -1,6 +1,5 @@
 const btn = document.querySelector(".mercadopago-button")
-const mp = new MercadoPago('APP_USR-f67862ea-f70e-4ae4-8e99-80dcff04b630');
-const bricksBuilder = mp.bricks();
+
 
 btn.addEventListener("click", (e) => {
     const date = new FormData();
@@ -16,7 +15,8 @@ btn.addEventListener("click", (e) => {
         return response.json()
     }
     Promise.resolve(Preferenc()).then(item => {
-        
+        const mp = new MercadoPago('APP_USR-f67862ea-f70e-4ae4-8e99-80dcff04b630');
+        const bricksBuilder = mp.bricks();
 
         mp.bricks().create("wallet", "wallet_container", {
             initialization: {
