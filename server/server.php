@@ -31,15 +31,12 @@ $item->unit_price = (float)$_POST["price"];
 $item->picture_url = "https://jgcode47-mp-ecommerce-php.herokuapp.com/assets/l6g6.jpg"; // Agrega la URL de la imagen del producto aquí
 $preference->items = array($item);
 
-// Configurar el número máximo de cuotas (mensualidades)
 $installments = 6; // Obtener el número de cuotas del formulario
 $preference->payment_methods = array(
-    'installments' => (int)$installments
-);
-
-$excludedPaymentMethod = "visa"; // Obtener el método de pago a excluir del formulario
-$preference->payment_methods->excluded_payment_methods = array(
-    array('id' => $excludedPaymentMethod)
+    'installments' => (int)$installments,
+    'excluded_payment_methods' => array(
+        array('id' => $excludedPaymentMethod)
+    )
 );
 
 $preference->back_urls = array(
