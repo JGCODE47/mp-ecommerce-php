@@ -15,7 +15,7 @@ btn.addEventListener("click", (e) => {
         return response.json()
     }
     Promise.resolve(Preferenc()).then(item => {
-        const mp = new MercadoPago('APP_USR-f67862ea-f70e-4ae4-8e99-80dcff04b630');
+        const mp = new MercadoPago('TEST-6d829d75-1d24-4339-a5b8-61fc5824d9d5');
         const bricksBuilder = mp.bricks();
 
         mp.bricks().create("wallet", "wallet_container", {
