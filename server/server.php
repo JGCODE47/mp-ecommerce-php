@@ -20,7 +20,6 @@ MercadoPago\SDK::setAccessToken("TEST-6077109975925282-092815-14c26c2c515e7e7a56
         "failure" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php", 
         "pending" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php"
     );
-    $preference->auto_return = "approved"; 
 
     $preference->save();
 
