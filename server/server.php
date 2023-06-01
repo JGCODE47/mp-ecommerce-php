@@ -31,18 +31,20 @@ $item->unit_price = (float)$_POST["price"];
 $item->picture_url = "https://jgcode47-mp-ecommerce-php.herokuapp.com/assets/l6g6.jpg"; // Agrega la URL de la imagen del producto aquí
 $preference->items = array($item);
 
-$installments = 6; // Obtener el número de cuotas del formulario
 $preference->payment_methods = array(
-    'installments' => (int)$installments,
-    'excluded_payment_methods' => array(
-        array('id' => $excludedPaymentMethod)
-    )
-);
+    "excluded_payment_methods" => array(
+      array("id" => "visa")
+    ),
+    "excluded_payment_types" => array(
+      array("id" => "ticket")
+    ),
+    "installments" => 6
+  );
 
 $preference->back_urls = array(
-    "success" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php",
-    "failure" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php",
-    "pending" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/status.php"
+    "success" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/aprobado.php",
+    "failure" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/declinado.php",
+    "pending" => "https://jgcode47-mp-ecommerce-php.herokuapp.com/pendiente.php"
 );
 
 $preference->notification_url = "https://jgcode47-mp-ecommerce-php.herokuapp.com/webhooks.php";
